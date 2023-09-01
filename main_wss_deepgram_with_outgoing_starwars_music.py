@@ -217,7 +217,7 @@ def main():
     #	proxy_server = websockets.serve(proxy, '0.0.0.0', 443, ssl=ssl_context)
 
     # use this if not using ssl
-    proxy_server = websockets.serve(proxy, 'localhost', 5001)
+    proxy_server = websockets.serve(proxy, '0.0.0.0', 8000)
 
     asyncio.get_event_loop().run_until_complete(proxy_server)
     asyncio.get_event_loop().run_forever()
